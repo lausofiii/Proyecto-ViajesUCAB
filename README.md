@@ -1,30 +1,33 @@
-# ViajesUCAB
+# ViajesUCAB: Sistema de Gestión para Agencia de Viajes
 
-*Automatically synced with your [v0.app](https://v0.app) deployments*
+Panel administrativo y modelo relacional para una agencia de viajes, desarrollado como proyecto académico en la Universidad Católica Andrés Bello (UCAB). Este repositorio documenta el diseño de la base de datos y la interfaz de gestión para el control de inventario de servicios, promociones y tasas de cambio.
 
-[![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?style=for-the-badge&logo=vercel)](https://vercel.com/lsmartinez23-3026s-projects/v0-viajes-ucab)
-[![Built with v0](https://img.shields.io/badge/Built%20with-v0.app-black?style=for-the-badge)](https://v0.app/chat/projects/gIWhUVpx2f8)
+## Base de Datos y Modelado (Backend)
 
-## Overview
+El núcleo de mi trabajo en este proyecto consistió en el diseño y estructuración del modelo relacional, garantizando la integridad de los datos y la escalabilidad del sistema:
 
-This repository will stay in sync with your deployed chats on [v0.app](https://v0.app).
-Any changes you make to your deployed app will be automatically pushed to this repository from [v0.app](https://v0.app).
+- **Estructuración de Esquemas:** Diseño del modelo Entidad-Relación (ER) para la gestión integral de la agencia.
+- **Módulos de Datos:**
+  - **Inventario:** Control de servicios turísticos (vuelos, tours, cruceros), capacidad disponible/reservada y trazabilidad de cambios.
+  - **Promociones:** Gestión de descuentos, vigencia y asociación de destinos.
+  - **Tasas de Cambio:** Registro histórico y actualización de valores por moneda frente al bolívar.
+- **Tipado y Contratos:** Definición de interfaces en **TypeScript** (`types/`) que reflejan fielmente el esquema relacional de la base de datos.
 
-## Deployment
+## Tecnologías del Proyecto
 
-Your project is live at:
+| Área | Herramientas |
+|------|--------------|
+| Lenguaje | TypeScript |
+| Frontend | Next.js 14 (App Router) + React 18 |
+| Estilos & Componentes | Tailwind CSS 4 + shadcn/ui |
+| Modelado | SQL / Relational Data Modeling |
 
-**[https://vercel.com/lsmartinez23-3026s-projects/v0-viajes-ucab](https://vercel.com/lsmartinez23-3026s-projects/v0-viajes-ucab)**
+## Cómo ejecutar la interfaz
 
-## Build your app
+**Requisitos:** Node.js 18+ y [pnpm](https://pnpm.io/).
 
-Continue building your app on:
-
-**[https://v0.app/chat/projects/gIWhUVpx2f8](https://v0.app/chat/projects/gIWhUVpx2f8)**
-
-## How It Works
-
-1. Create and modify your project using [v0.app](https://v0.app)
-2. Deploy your chats from the v0 interface
-3. Changes are automatically pushed to this repository
-4. Vercel deploys the latest version from this repository
+```bash
+git clone [https://github.com/lausofiii/Proyecto-ViajesUCAB.git](https://github.com/lausofiii/Proyecto-ViajesUCAB.git)
+cd Proyecto-ViajesUCAB
+pnpm install
+pnpm dev
